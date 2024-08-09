@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTU College Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin: 20px 0;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        .course-content {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-content.active {
+            display: block;
+        }
+
+        .course-content h2 {
+            margin-top: 0;
+        }
+
+        .course-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .course-content ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>GTU College Courses</h1>
+    <div class="buttons">
+        <button onclick="showTerms('odd')">Odd Terms</button>
+        <button onclick="showTerms('even')">Even Terms</button>
+    </div>
+    <div id="term-options" class="buttons" style="display: none;">
+        <!-- Options for Semesters will be injected here -->
+    </div>
+    <div id="courses">
+        <!-- Semester course contents -->
+        <div id="sem1" class="course-content">
+            <h2>Semester 1</h2>
+            <ul>
+                <li>Introduction to Programming (C)</li>
+                <li>Mathematics for Computer Science</li>
+                <li>Computer Fundamentals</li>
+                <li>Basic Electronics</li>
+                <li>Engineering Drawing</li>
+            </ul>
+        </div>
+        <div id="sem2" class="course-content">
+            <h2>Semester 2</h2>
+            <ul>
+                <li>Advanced Programming (C++)</li>
+                <li>Discrete Mathematics</li>
+                <li>Data Structures</li>
+                <li>Digital Logic Design</li>
+                <li>Communication Skills</li>
+            </ul>
+        </div>
+        <div id="sem3" class="course-content">
+            <h2>Semester 3</h2>
+            <ul>
+                <li>Web Development (HTML, CSS, JavaScript)</li>
+                <li>Database Management Systems</li>
+                <li>Operating Systems</li>
+                <li>Computer Networks</li>
+                <li>Software Engineering</li>
+            </ul>
+        </div>
+        <div id="sem4" class="course-content">
+            <h2>Semester 4</h2>
+            <ul>
+                <li>Object-Oriented Programming (Java)</li>
+                <li>Operating Systems</li>
+                <li>Computer Architecture</li>
+                <li>Network Security</li>
+                <li>Mathematics for Computer Science</li>
+            </ul>
+        </div>
+        <div id="sem5" class="course-content">
+            <h2>Semester 5</h2>
+            <ul>
+                <li>Web Technologies</li>
+                <li>Software Project Management</li>
+                <li>Data Warehousing</li>
+                <li>Human-Computer Interaction</li>
+                <li>Advanced Database Management Systems</li>
+            </ul>
+        </div>
+        <div id="sem6" class="course-content">
+            <h2>Semester 6</h2>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Cloud Computing</li>
+                <li>Software Engineering</li>
+                <li>Internet of Things (IoT)</li>
+                <li>Project Work</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showTerms(term) {
+            const termOptions = document.getElementById('term-options');
+            let html = '';
+
+            if (term === 'odd') {
+                html = `
+                    <button onclick="showCourses('sem1')">Semester 1</button>
+                    <button onclick="showCourses('sem3')">Semester 3</button>
+                    <button onclick="showCourses('sem5')">Semester 5</button>
+                `;
+            } else if (term === 'even') {
+                html = `
+                    <button onclick="showCourses('sem2')">Semester 2</button>
+                    <button onclick="showCourses('sem4')">Semester 4</button>
+                    <button onclick="showCourses('sem6')">Semester 6</button>
+                `;
+            }
+
+            termOptions.innerHTML = html;
+            termOptions.style.display = 'block';
+        }
+
+        function showCourses(semester) {
+            // Hide all course contents
+            const contents = document.querySelectorAll('.course-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Show the selected semester content
+            const selectedContent = document.getElementById(semester);
+            if (selectedContent) {
+                selectedContent.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Summary</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 30px;
+        }
+        .tab-content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Web Development Course Summary</h1>
+        
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="unit1-tab" data-bs-toggle="tab" href="#unit1" role="tab" aria-controls="unit1" aria-selected="true">Unit 1</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="unit2-tab" data-bs-toggle="tab" href="#unit2" role="tab" aria-controls="unit2" aria-selected="false">Unit 2</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="unit3-tab" data-bs-toggle="tab" href="#unit3" role="tab" aria-controls="unit3" aria-selected="false">Unit 3</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="unit4-tab" data-bs-toggle="tab" href="#unit4" role="tab" aria-controls="unit4" aria-selected="false">Unit 4</a>
+            </li>
+        </ul>
+        
+        <!-- Tab content -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="unit1" role="tabpanel" aria-labelledby="unit1-tab">
+                <h3>Unit 1: Introduction to HTML</h3>
+                <p>This unit covers the basics of HTML including structure, elements, and attributes. You'll learn to create simple webpages and understand the building blocks of web development.</p>
+            </div>
+            <div class="tab-pane fade" id="unit2" role="tabpanel" aria-labelledby="unit2-tab">
+                <h3>Unit 2: CSS Basics</h3>
+                <p>This unit introduces CSS for styling webpages. Topics include selectors, properties, layout techniques, and responsive design principles.</p>
+            </div>
+            <div class="tab-pane fade" id="unit3" role="tabpanel" aria-labelledby="unit3-tab">
+                <h3>Unit 3: JavaScript Fundamentals</h3>
+                <p>Learn the basics of JavaScript, including variables, functions, and events. This unit focuses on adding interactivity to webpages and basic scripting techniques.</p>
+            </div>
+            <div class="tab-pane fade" id="unit4" role="tabpanel" aria-labelledby="unit4-tab">
+                <h3>Unit 4: Advanced Web Development</h3>
+                <p>This unit covers more advanced topics such as APIs, AJAX, and modern frameworks. You'll also work on integrating various technologies to create dynamic and complex web applications.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
