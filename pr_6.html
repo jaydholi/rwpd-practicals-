@@ -6,32 +6,57 @@
     <title>Student Activities</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .header {
+            background: linear-gradient(to right, #ff6f61, #de8e92);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+        }
         .activity-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
             overflow: hidden;
-            margin-bottom: 20px;
-            transition: box-shadow 0.3s ease;
         }
         .activity-card:hover {
-            box-shadow: 0 4px 8px rgb(240, 3, 74);
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
         .activity-image {
             width: 100%;
             height: auto;
+            border-bottom: 5px solid #ff6f61;
         }
         .activity-description {
-            padding: 15px;
+            padding: 20px;
+            background: #fff;
         }
-        .table-hover tbody tr:hover {
-            background-color: #f5f5f5;
+        .activity-description h4 {
+            color: #ff6f61;
         }
-        .table-striped tbody tr:nth-of-type(odd) {
-            background-color: #f9f9f9;
+        .stats-card {
+            background-color: #fff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .table-bordered td, .table-bordered th {
-            border: 1px solid #ddd;
+        .stats-card .icon {
+            font-size: 40px;
+            color: #ff6f61;
+        }
+        .progress-bar {
+            background-color: #ff6f61;
         }
         .table-dark {
             background-color: #343a40;
@@ -40,125 +65,90 @@
         .table-dark td, .table-dark th {
             border: 1px solid #454d55;
         }
+        @media (max-width: 767px) {
+            .activity-card, .stats-card {
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center my-4">Student Co-Curricular and Extra Activities</h1>
+    <header class="header">
+        <h1>Student Co-Curricular and Extra Activities</h1>
+    </header>
 
+    <div class="container my-5">
         <div class="row">
-            <!-- Activity 1 -->
+            <!-- Activity Cards -->
             <div class="col-md-4">
                 <div class="activity-card">
-                    <img src="—Pngtree—web development illustration modern_4461018.png" alt="Web Development Bootcamp" class="activity-image">
+                    <img src="https://via.placeholder.com/500x300" alt="Web Development Bootcamp" class="activity-image">
                     <div class="activity-description">
                         <h4>Web Development Bootcamp</h4>
                         <p>Participate in intensive bootcamps focusing on front-end and back-end web development, covering HTML, CSS, JavaScript, and popular frameworks.</p>
                     </div>
                 </div>
             </div>
-            <!-- Activity 2 -->
             <div class="col-md-4">
                 <div class="activity-card">
-                    <img src="" alt="Hackathons" class="activity-image">
+                    <img src="https://via.placeholder.com/500x300" alt="Hackathons" class="activity-image">
                     <div class="activity-description">
                         <h4>Hackathons</h4>
                         <p>Join hackathons to work on coding challenges and build innovative projects within a limited time, collaborating with other developers.</p>
                     </div>
                 </div>
             </div>
-            <!-- Activity 3 -->
             <div class="col-md-4">
                 <div class="activity-card">
-                    <img src="https://www.example.com/hd-code-reviews.jpg" alt="Code Reviews" class="activity-image">
+                    <img src="https://via.placeholder.com/500x300" alt="Code Reviews" class="activity-image">
                     <div class="activity-description">
                         <h4>Code Reviews</h4>
                         <p>Engage in peer code reviews to improve coding practices, enhance code quality, and learn from the feedback of experienced developers.</p>
                     </div>
                 </div>
             </div>
-            <!-- Activity 4 -->
+            <!-- More Activity Cards -->
+        </div>
+
+        <h2 class="text-center my-4">Activity Statistics</h2>
+        <div class="row">
+            <!-- Stats Card 1 -->
             <div class="col-md-4">
-                <div class="activity-card">
-                    <img src="https://www.example.com/hd-web-design-workshops.jpg" alt="Web Design Workshops" class="activity-image">
-                    <div class="activity-description">
-                        <h4>Web Design Workshops</h4>
-                        <p>Attend workshops to learn the principles of responsive design, UX/UI design, and use design tools to create visually appealing websites.</p>
+                <div class="stats-card">
+                    <i class="fas fa-laptop-code icon"></i>
+                    <h3>Web Development Bootcamp</h3>
+                    <div class="progress mb-2">
+                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
                     </div>
+                    <p>Participants: 30</p>
                 </div>
             </div>
-            <!-- Activity 5 -->
+            <!-- Stats Card 2 -->
             <div class="col-md-4">
-                <div class="activity-card">
-                    <img src="https://www.example.com/hd-project-showcases.jpg" alt="Project Showcases" class="activity-image">
-                    <div class="activity-description">
-                        <h4>Project Showcases</h4>
-                        <p>Present your web development projects in showcases, demonstrating your skills and receiving feedback from peers and industry professionals.</p>
+                <div class="stats-card">
+                    <i class="fas fa-code-branch icon"></i>
+                    <h3>Hackathons</h3>
+                    <div class="progress mb-2">
+                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
                     </div>
+                    <p>Participants: 25</p>
                 </div>
             </div>
-            <!-- Activity 6 -->
+            <!-- Stats Card 3 -->
             <div class="col-md-4">
-                <div class="activity-card">
-                    <img src="https://www.example.com/hd-api-integration-sessions.jpg" alt="API Integration Sessions" class="activity-image">
-                    <div class="activity-description">
-                        <h4>API Integration Sessions</h4>
-                        <p>Participate in sessions focused on integrating third-party APIs into web applications, enhancing functionality and user experience.</p>
+                <div class="stats-card">
+                    <i class="fas fa-code-branch icon"></i>
+                    <h3>Code Reviews</h3>
+                    <div class="progress mb-2">
+                        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
                     </div>
+                    <p>Participants: 20</p>
                 </div>
             </div>
         </div>
 
-        <h2 class="text-center my-4">Activity Statistics</h2>
-        <table class="table table-bordered table-striped table-hover">
-            <thead>
-                <tr>
-                    <th>Activity</th>
-                    <th>Participants</th>
-                    <th>Events Held</th>
-                    <th>Next Event</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Web Development Bootcamp</td>
-                    <td>30</td>
-                    <td>4</td>
-                    <td>Advanced Web Workshop</td>
-                </tr>
-                <tr>
-                    <td>Hackathons</td>
-                    <td>25</td>
-                    <td>6</td>
-                    <td>Annual Hackathon</td>
-                </tr>
-                <tr>
-                    <td>Code Reviews</td>
-                    <td>20</td>
-                    <td>8</td>
-                    <td>Peer Review Session</td>
-                </tr>
-                <tr>
-                    <td>Web Design Workshops</td>
-                    <td>22</td>
-                    <td>5</td>
-                    <td>UI/UX Design Workshop</td>
-                </tr>
-                <tr>
-                    <td>Project Showcases</td>
-                    <td>15</td>
-                    <td>3</td>
-                    <td>Spring Project Expo</td>
-                </tr>
-                <tr>
-                    <td>API Integration Sessions</td>
-                    <td>18</td>
-                    <td>7</td>
-                    <td>API Integration Lab</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        
+                    
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
