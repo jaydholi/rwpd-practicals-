@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Job Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .company-name {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .job-list {
+            margin-bottom: 30px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .submission-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Company Name -->
+        <div class="company-name">
+            <h1>Tech Innovators Inc.</h1>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="section">
+            <h2 class="text-center">Why Choose Us?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Innovative Projects</h5>
+                            <p class="card-text">We work on cutting-edge technology and offer opportunities to work on innovative projects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Great Work Environment</h5>
+                            <p class="card-text">Our team enjoys a collaborative and supportive work environment with room for growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Competitive Benefits</h5>
+                            <p class="card-text">We offer competitive salaries and benefits to ensure our employees are well taken care of.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Openings with Qualifications -->
+        <div class="section">
+            <h2 class="text-center">Current Job Openings</h2>
+            <div class="job-list">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h5>Software Developer - Full Stack</h5>
+                        <p><strong>Qualifications:</strong></p>
+                        <ul>
+                            <li>Bachelor's degree in Computer Science or related field</li>
+                            <li>3+ years of experience in full-stack development</li>
+                            <li>Proficiency in JavaScript, HTML, CSS, and frameworks like React or Angular</li>
+                            <li>Experience with backend technologies like Node.js or Python</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>UX/UI Designer</h5>
+                        <p><strong>Qualifications:</strong></p>
+                        <ul>
+                            <li>Bachelor's degree in Design, HCI, or related field</li>
+                            <li>2+ years of experience in UX/UI design</li>
+                            <li>Proficiency with design tools like Sketch, Figma, or Adobe XD</li>
+                            <li>Strong portfolio showcasing design work and user-centered design principles</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>Project Manager</h5>
+                        <p><strong>Qualifications:</strong></p>
+                        <ul>
+                            <li>Bachelor's degree in Management, Business, or related field</li>
+                            <li>5+ years of experience in project management</li>
+                            <li>Proven experience managing cross-functional teams</li>
+                            <li>Strong knowledge of project management methodologies (e.g., Agile, Scrum)</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <h5>Data Scientist</h5>
+                        <p><strong>Qualifications:</strong></p>
+                        <ul>
+                            <li>Master's degree in Data Science, Statistics, or related field</li>
+                            <li>3+ years of experience in data analysis and modeling</li>
+                            <li>Proficiency in data analysis tools and programming languages such as Python or R</li>
+                            <li>Experience with machine learning algorithms and statistical analysis</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Application Form -->
+        <div class="section form-container">
+            <h2 class="text-center">Apply for a Job</h2>
+            <form id="application-form">
+                <div class="row mb-3">
+                    <!-- Name -->
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Full Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email address</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <!-- Phone Number -->
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="col-md-6">
+                        <label for="address" class="form-label">Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-house"></i></span>
+                            <input type="text" class="form-control" id="address" placeholder="Enter your address" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <!-- Position -->
+                    <div class="col-md-6">
+                        <label for="position" class="form-label">Position Applying For</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="position" placeholder="Position" required>
+                            <span class="input-group-text"><i class="bi bi-briefcase"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Resume Upload -->
+                    <div class="col-md-6">
+                        <label for="resume" class="form-label">Resume</label>
+                        <div class="input-group">
+                            <input type="file" class="form-control" id="resume" required>
+                            <span class="input-group-text"><i class="bi bi-file-earmark"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cover Letter -->
+                <div class="mb-3">
+                    <label for="coverLetter" class="form-label">Cover Letter</label>
+                    <textarea class="form-control" id="coverLetter" rows="4" placeholder="Write your cover letter here" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </div>
+            </form>
+            <div id="submission-message" class="submission-message mt-3">
+                <p>Thank you for your application! We will review your information and get back to you soon.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Icons -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script>
+        document.getElementById('application-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            document.getElementById('submission-message').style.display = 'block';
+            this.reset(); // Optionally reset the form fields
+        });
+    </script>
+</body>
+</html>
