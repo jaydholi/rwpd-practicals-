@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider Information</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+        
+        .card {
+            margin-bottom: 30px;
+        }
+        
+        .alert-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Service Provider Information</h1>
+
+    <div class="container">
+        <!-- Bootstrap Alerts -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Attention!</strong> New services available! Check out the details below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- Service Provider Card 1 -->
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                Internet Service Provider
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">FastNet Internet Services</h5>
+                <p class="card-text">FastNet offers high-speed internet services across the city. With a range of plans suitable for all kinds of users, we ensure uninterrupted and reliable service.</p>
+                <ul class="list-group">
+                    <li class="list-group-item">High-speed broadband</li>
+                    <li class="list-group-item">24/7 Customer Support</li>
+                    <li class="list-group-item">Affordable pricing plans</li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-3">Contact Us</a>
+            </div>
+        </div>
+
+        <!-- Service Provider Card 2 -->
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                Electricity Provider
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">GreenEnergy Power Corporation</h5>
+                <p class="card-text">GreenEnergy Power Corporation is dedicated to providing clean and renewable electricity to homes and businesses. Our focus is on sustainability and reducing the carbon footprint.</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Renewable energy solutions</li>
+                    <li class="list-group-item">24/7 Power Supply</li>
+                    <li class="list-group-item">Low-cost electricity plans</li>
+                </ul>
+                <a href="#" class="btn btn-success mt-3">Get a Quote</a>
+            </div>
+        </div>
+
+        <!-- Service Provider Card 3 -->
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                Water Service Provider
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">BlueWave Water Supply</h5>
+                <p class="card-text">BlueWave is a trusted name for water supply services in the city. We ensure clean and safe water to every household and business.</p>
+                <ul class="list-group">
+                    <li class="list-group-item">24/7 Water supply</li>
+                    <li class="list-group-item">Regular maintenance and quality checks</li>
+                    <li class="list-group-item">Affordable rates</li>
+                </ul>
+                <a href="#" class="btn btn-info mt-3 text-white">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message after alert is closed -->
+    <div class="alert-message" id="alertMessage" style="display:none;">
+        The alert has been closed!
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to Show Message After Alert is Closed -->
+    <script>
+        const alertElement = document.querySelector('.alert');
+        const alertMessage = document.getElementById('alertMessage');
+
+        alertElement.addEventListener('close.bs.alert', function() {
+            alertMessage.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfected Navbar and Footer</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding-bottom: 80px;
+            /* Space for fixed footer */
+            background-color: #f4f4f4;
+            /* Light background */
+        }
+        /* Navbar Styles */
+        
+        .navbar {
+            background-color: #0056b3;
+            /* Deep blue for navbar */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+            padding: 1rem 1.5rem;
+            /* Padding for better spacing */
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+        
+        .navbar-toggler {
+            border-color: #fff;
+            /* White toggle button for contrast */
+        }
+        
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 1rem;
+            margin-left: 1.5rem;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #ffdf00;
+            /* Gold hover effect */
+        }
+        
+        .dropdown-menu {
+            background-color: #0056b3;
+            /* Same color as navbar */
+            border: none;
+        }
+        
+        .dropdown-item {
+            color: #fff;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #ffdf00;
+            /* Hover effect for dropdown */
+            color: #0056b3;
+        }
+        
+        .form-control {
+            border-radius: 20px;
+            /* Rounded search bar */
+            border: 1px solid #fff;
+            /* White border for search bar */
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Transparent input */
+            color: #fff;
+        }
+        
+        .form-control::placeholder {
+            color: #f4f4f4;
+        }
+        
+        .btn-signup {
+            background-color: #ffdf00;
+            color: #0056b3;
+            border-radius: 20px;
+            padding: 0.5rem 1.5rem;
+            margin-left: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .btn-signup:hover {
+            background-color: #fff;
+            color: #0056b3;
+        }
+        /* Footer Styles */
+        
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer a {
+            color: #ffdf00;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* Content Styles */
+        
+        .main-content {
+            padding: 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 80px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-weight: 600;
+            color: #343a40;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.3rem;
+                /* Smaller logo for mobile */
+            }
+            .navbar-nav .nav-link {
+                margin-left: 0;
+            }
+            .navbar-nav {
+                text-align: center;
+            }
+            .form-control {
+                margin-top: 10px;
+                /* Spacing for search on mobile */
+            }
+            .btn-signup {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MyBrand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#">SEO</a></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-light" type="submit">Search</button>
+                </form>
+                <a href="#" class="btn btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <h1>Welcome to Our Website!</h1>
+        <p>We provide the best services for web development, SEO, and more. Explore our services and learn more about how we can help you achieve your goals.</p>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MyBrand. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
