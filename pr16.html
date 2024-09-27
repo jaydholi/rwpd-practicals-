@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Family Tree</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 2.5rem;
+            color: #0056b3;
+            letter-spacing: 1px;
+        }
+        
+        .family-tree {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .media img {
+            border-radius: 50%;
+            border: 3px solid #0056b3;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .media-body {
+            padding-left: 20px;
+        }
+        
+        .media-body h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0056b3;
+        }
+        
+        .media-body p {
+            font-size: 0.95rem;
+            color: #333333;
+        }
+        
+        .media {
+            margin-bottom: 30px;
+        }
+        
+        .sub-media {
+            margin-left: 50px;
+            padding: 10px;
+            border-left: 2px solid #cce7ff;
+        }
+        
+        .media-body:hover {
+            background-color: #f9fcff;
+            border-radius: 10px;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        /* Adding subtle animation to media items */
+        
+        .media {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .media:hover {
+            transform: translateY(-5px);
+        }
+        /* Custom colors for family levels */
+        
+        .grandparent {
+            background-color: #e6f1ff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .parent {
+            background-color: #d1ecff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        
+        .child {
+            background-color: #e4cf16e3;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Beautiful Family Tree</h1>
+
+    <div class="container family-tree">
+        <!-- Root Parent (Grandparent) -->
+        <div class="media grandparent">
+            <img src="https://via.placeholder.com/100" alt="Grandparent Image" class="align-self-start mr-3" width="100" height="100">
+            <div class="media-body">
+                <h5 class="mt-0">Grandfather John Doe</h5>
+                <p>John is the head of the family, always wise and caring. He loves to share stories with everyone.</p>
+
+                <!-- Nested media object - Parent (Father) -->
+                <div class="media mt-3 sub-media parent">
+                    <img src="https://via.placeholder.com/80" alt="Father Image" class="align-self-start mr-3" width="80" height="80">
+                    <div class="media-body">
+                        <h5 class="mt-0">Father Michael Doe</h5>
+                        <p>Michael is the supportive father who works hard for his family and loves spending time with his kids.</p>
+
+                        <!-- Nested media object - Child 1 -->
+                        <div class="media mt-3 sub-media child">
+                            <img src="https://via.placeholder.com/60" alt="Child 1 Image" class="align-self-start mr-3" width="60" height="60">
+                            <div class="media-body">
+                                <h5 class="mt-0">Son: James Doe</h5>
+                                <p>James is the first-born, full of energy and curiosity. He enjoys playing sports and learning new things.</p>
+                            </div>
+                        </div>
+
+                        <!-- Nested media object - Child 2 -->
+                        <div class="media mt-3 sub-media child">
+                            <img src="https://via.placeholder.com/60" alt="Child 2 Image" class="align-self-start mr-3" width="60" height="60">
+                            <div class="media-body">
+                                <h5 class="mt-0">Daughter: Emily Doe</h5>
+                                <p>Emily is the youngest in the family, always cheerful and creative. She loves to draw and read stories.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nested media object - Parent (Mother) -->
+                <div class="media mt-3 sub-media parent">
+                    <img src="https://via.placeholder.com/80" alt="Mother Image" class="align-self-start mr-3" width="80" height="80">
+                    <div class="media-body">
+                        <h5 class="mt-0">Mother Sarah Doe</h5>
+                        <p>Sarah is the loving mother, always taking care of the family and making sure everyone is happy.
+                        </p>
+
+                        <!-- Nested media object - Child 3 -->
+                        <div class="media mt-3 sub-media child">
+                            <img src="https://via.placeholder.com/60" alt="Child 3 Image" class="align-self-start mr-3" width="60" height="60">
+                            <div class="media-body">
+                                <h5 class="mt-0">Daughter: Olivia Doe</h5>
+                                <p>Olivia is the middle child, very studious and kind. She loves helping others and dreams of becoming a doctor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Page Transitions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* General page styling */
+        
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        /* Smooth transition sections */
+        
+        .section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            visibility: hidden;
+        }
+        /* Backgrounds for different sections */
+        
+        #home {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        #about {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        #contact {
+            background-color: #ffc107;
+            color: white;
+        }
+        /* Only active section is visible */
+        
+        .active-section {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Navbar styling */
+        
+        .navbar-nav {
+            margin-left: auto;
+        }
+        
+        .nav-link {
+            font-size: 1.2rem;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('about')">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('contact')">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <div id="home" class="section active-section">
+        <h1>Welcome to Our Homepage</h1>
+        <p>This is where you can learn more about our services and offerings.</p>
+    </div>
+
+    <div id="about" class="section">
+        <h1>About Us</h1>
+        <p>We are dedicated to providing top-notch services to our clients. Learn more about us here.</p>
+    </div>
+
+    <div id="contact" class="section">
+        <h1>Contact Us</h1>
+        <p>Feel free to reach out to us for any queries or services you need.</p>
+    </div>
+
+    <!-- Bootstrap JS and custom JavaScript for transitions -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Function to show the appropriate section with a smooth transition
+        function showSection(sectionId) {
+            // Get all sections
+            var sections = document.querySelectorAll('.section');
+            // Hide all sections
+            sections.forEach(function(section) {
+                section.classList.remove('active-section');
+            });
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active-section');
+        }
+
+        // Initialize by showing the home section when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
+    </script>
+
+</body>
+
+</html>
